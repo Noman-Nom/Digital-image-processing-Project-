@@ -30,9 +30,15 @@ const Histogram = () => {
       accumulator.push(index > 0 ?  accumulator[index -1 ] +currentValue: currentValue)
 
 
-      console.log( "cdf=", accumulator)
+      // console.log( "cdf=", accumulator)
       return accumulator
     },[])
+
+    // console.log("CDF = ", cdf)
+
+
+    
+
   }
 
   return (
