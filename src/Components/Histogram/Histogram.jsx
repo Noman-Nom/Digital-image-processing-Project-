@@ -20,6 +20,13 @@ const Histogram = () => {
 
   }
 
+  const calculate = ()=>{
+
+    const normalizeData = inputData.map((value)=> parseFloat(value)/4096)
+
+    console.log( "normalizeData = ", normalizeData)
+  }
+
   return (
     <div className='container'>
 
@@ -38,6 +45,8 @@ const Histogram = () => {
 
         ))}
       </table>
+
+      <button onClick={calculate}>Calculate</button>
     </div>
 
 
