@@ -24,7 +24,15 @@ const Histogram = () => {
 
     const normalizeData = inputData.map((value)=> parseFloat(value)/4096)
 
-    console.log( "normalizeData = ", normalizeData)
+    // console.log( "normalizeData = ", normalizeData)
+    const cdf = normalizeData.reduce((accumulator , currentValue, index)=>{
+
+      accumulator.push(index > 0 ?  accumulator[index -1 ] +currentValue: currentValue)
+
+
+      console.log( "cdf=", accumulator)
+      return accumulator
+    },[])
   }
 
   return (
