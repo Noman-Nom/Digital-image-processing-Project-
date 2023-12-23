@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import './Histogram.scss';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Rectangle } from 'recharts';
+import Example from '../Example/Example';
+
+
+
+
+
 
 const Histogram = () => {
   const [inputData, setinputData] = useState(Array(8).fill(''));
@@ -87,6 +95,13 @@ const Histogram = () => {
               
             </div>
 
+          
+
+
+            <div className='chart'>
+            <Example aspect={0.8/.5}/>
+            </div>
+  
     </div>
   );
 };

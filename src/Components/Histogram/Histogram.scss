@@ -10,6 +10,7 @@
         align-items: center;
         flex-direction: column;
         gap: 20px;
+        border: 1px solid green;
     }
     table {
         border-collapse: collapse;
@@ -47,4 +48,10 @@
         width: 50px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         margin: 0px;
+    }
+
+    .chart{
+        border: 1px solid white;
+        width: 500px;
+        height: 280px;
     }
