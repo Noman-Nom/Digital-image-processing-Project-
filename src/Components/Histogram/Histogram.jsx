@@ -36,8 +36,11 @@ const Histogram = () => {
 
     // console.log("CDF = ", cdf)
 
+    const equiliziedHistogram = cdf.map((value)=>(Math.round(value*7))
+    )
 
-    
+        console.log("EquilizedHisogram = ", equiliziedHistogram)
+
 
   }
 
