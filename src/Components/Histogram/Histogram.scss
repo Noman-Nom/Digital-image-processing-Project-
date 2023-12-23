@@ -1,0 +1,50 @@
+    
+    h1{
+        text-align: center;
+        margin-top: 20px;
+    
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    table {
+        border-collapse: collapse;
+        margin-top: 10px;
+        align-items: center;
+        background-color: rgb(183, 205, 210);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        width: 300px;
+        
+    }
+    
+    button{
+        padding: 10px 11px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 10px;
+        border: 0;
+        outline: 0;
+        cursor: pointer;
+        background-color: rgb(183, 205, 210);
+        width: 150px;
+    }
+    
+    table, th, td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+        
+    }
+    table input{
+        outline: none;
+        border: 0;
+        padding: 10px;
+        background-color: rgb(183, 205, 210);
+        width: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0px;
+    }
