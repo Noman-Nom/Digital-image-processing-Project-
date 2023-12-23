@@ -1,111 +1,94 @@
-import React, { useEffect } from 'react'
-import './Histogram.scss'
-import { useState } from 'react'
+import React, { useState } from 'react';
+import './Histogram.scss';
 
 const Histogram = () => {
-
-  const [inputData, setinputData] = useState(Array(8).fill(''))
-
-  const [v1, setV1] = useState('')
-  const [v2, setV2] = useState('')
-
-  const [size, setSize] = useState(0)
-
- 
-
-  console.log(typeof v1)
-  console.log(typeof v2)
-
-
-
-
+  const [inputData, setinputData] = useState(Array(8).fill(''));
+  const [width, setWidth] = useState('');
+  const [height, setHeight] = useState('');
+  const [size, setSize] = useState(0);
 
   const handleSize = () => {
-
-    const sizeOfImage = parseInt(v1) * parseInt(v2)
-
-    setSize(sizeOfImage)
-  }
-
-  console.log("size = ", size)
-
+    const imageSize = parseInt(width) * parseInt(height);
+    setSize(imageSize);
+  };
 
   const handleChange = (index, value) => {
-
-
-
-    const newInputData = [...inputData]
-
-    console.log(newInputData)
-
-    newInputData[index] = value
-    setinputData(newInputData)
-
-    // console.log("values= ", value)
-    // tageting input with index
-
-  }
-
+    const newInputData = [...inputData];
+    newInputData[index] = value;
+    setinputData(newInputData);
+  };
 
   const calculate = () => {
-
-
-
-
-    const normalizeData = inputData.map((value) => parseFloat(value) / size)
-
-    console.log("normalizeData = ", normalizeData)
+    // Step 1: Normalize the data
+    const normalizeData = inputData.map((value) => parseFloat(value) / size);
+    console.log("Step 1: Normalized Data =", normalizeData);
+    // Step 2: Calculate the Cumulative Distribution Function (CDF)
     const cdf = normalizeData.reduce((accumulator, currentValue, index) => {
-
-      accumulator.push(index > 0 ? accumulator[index - 1] + currentValue : currentValue)
-
-
-      // console.log( "cdf=", accumulator)
-      return accumulator
-    }, [])
-
-    console.log("CDF = ", cdf)
-
-    const equiliziedHistogram = cdf.map((value) => (Math.round(value * 7)))
-
-
-            console.log("equi" , equiliziedHistogram) // this ans displayed in second time clicked why ?
-
-
-
-  }
-
+      accumulator.push(index > 0 ? accumulator[index - 1] + currentValue : currentValue);
+      return accumulator;
+    }, []);
+  
+    console.log("Step 2: Cumulative Distribution Function (CDF) =", cdf);
+    // Step 3: Calculate the Equilized Histogram
+    const equiliziedHistogram = cdf.map((value) => Math.round(value * 7));
+    console.log("Step 3: Equilized Histogram =", equiliziedHistogram);
+  
+    // Display the steps in a table with each value in a separate cell
+    const tableContent = `
+      <table border="1">
+        <tr>
+          <th>Input Values</th>
+          <th>Normalized Values</th>
+          <th>CDF</th>
+          <th>Equilized Histogram</th>
+        </tr>
+        ${inputData.map((value, index) => `
+          <tr>
+            <td>${value}</td>
+            <td>${normalizeData[index]}</td>
+            <td>${cdf[index]}</td>
+            <td>${equiliziedHistogram[index]}</td>
+          </tr>
+        `).join('')}
+      </table>
+    `;
+  
+    // Append the table to an element with id 'output'
+    document.getElementById('output').innerHTML = tableContent;
+  };
+  
   return (
     <div className='container'>
+      <input type="text" value={width} onChange={(e) => setWidth(e.target.value)} />
+      <input type="text" value={height} onChange={(e) => setHeight(e.target.value)} />
 
-
-      <input type="text" value={v1} onChange={(e) => setV1(e.target.value)} />
-      <input type="text" value={v2} onChange={(e) => setV2(e.target.value)} />
-
-      <button onClick={handleSize}>Calculaate image Size </button>
-
+      <button onClick={handleSize}>Calculate Image Size</button>
 
       <table id='inputData'>
         {inputData.map((value, index) => (
           <tr key={index}>
             <td>
-              <input type="text"
-
+              <input
+                type="text"
                 value={value}
                 onChange={(e) => handleChange(index, e.target.value)}
               />
             </td>
-
           </tr>
-
         ))}
       </table>
 
-      <button onClick={calculate}>Calculate</button>
+      <button onClick={calculate}>Calculate Histogram</button>
+
+
+            <div className='Calculatons'>
+
+              <div id='output'></div>
+              
+            </div>
+
     </div>
+  );
+};
 
-
-  )
-}
-
-export default Histogram
+export default Histogram;
