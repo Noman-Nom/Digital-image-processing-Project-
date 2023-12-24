@@ -15,6 +15,8 @@ const Histogram = () => {
   const [height, setHeight] = useState('');
   const [size, setSize] = useState(0);
 
+  const inputIntensity = [0,1,2,3,4,5,6,7]
+
   const handleSize = () => {
     const imageSize = parseInt(width) * parseInt(height);
     setSize(imageSize);
@@ -45,6 +47,7 @@ const Histogram = () => {
     const tableContent = `
       <table border="1">
         <tr>
+          <th>Input Intensity</th>
           <th>Input Values</th>
           <th>Normalized Values</th>
           <th>CDF</th>
@@ -52,6 +55,8 @@ const Histogram = () => {
         </tr>
         ${inputData.map((value, index) => `
           <tr>
+
+            <td>${inputIntensity[index]}</td>
             <td>${value}</td>
             <td>${normalizeData[index]}</td>
             <td>${cdf[index]}</td>
@@ -73,8 +78,14 @@ const Histogram = () => {
       <button onClick={handleSize}>Calculate Image Size</button>
 
       <table id='inputData'>
+
+      <tr>
+          <th>Input Intensity</th>
+          <th>Input Values</th>
+          </tr>
         {inputData.map((value, index) => (
           <tr key={index}>
+            <td>{inputIntensity[index]}</td>
             <td>
               <input
                 type="text"
