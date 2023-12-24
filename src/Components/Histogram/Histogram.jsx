@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Histogram.scss';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Rectangle } from 'recharts';
 import Example from '../Example/Example';
+
+
+// const data = [
+//   // i want x -axis input intensities and in y -axis normalized valuees
+
+// ];
+
 
 
 
@@ -14,6 +21,7 @@ const Histogram = () => {
   const [width, setWidth] = useState('');
   const [height, setHeight] = useState('');
   const [size, setSize] = useState(0);
+  const [chartData, setChartData] = useState([])
 
   const inputIntensity = [0,1,2,3,4,5,6,7]
 
@@ -27,6 +35,11 @@ const Histogram = () => {
     newInputData[index] = value;
     setinputData(newInputData);
   };
+
+  useEffect(() => {
+    // This effect will run whenever chartData is updated
+    // console.log("chartData", chartData);
+  }, [chartData]);
 
   const calculate = () => {
     // Step 1: Normalize the data
@@ -42,6 +55,15 @@ const Histogram = () => {
     // Step 3: Calculate the Equilized Histogram
     const equiliziedHistogram = cdf.map((value) => Math.round(value * 7));
     console.log("Step 3: Equilized Histogram =", equiliziedHistogram);
+
+    
+    const data = inputIntensity.map((intensity,index)=>({
+                  intensity,
+                  normalizeData:normalizeData[index]
+                }))
+                setChartData(data)
+
+    // console.log( "chartdata",chartData)
   
     // Display the steps in a table with each value in a separate cell
     const tableContent = `
@@ -110,7 +132,7 @@ const Histogram = () => {
 
 
             <div className='chart'>
-            <Example aspect={0.8/.5}/>
+            <Example aspect={0.8/.5} chartData={chartData}/>
             </div>
   
     </div>
