@@ -4,24 +4,24 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 // import './Chart.scss'
 
 
-const Example = ({ aspect, chartData }) => {
-  console.log("chartData", chartData);  
+const Equilized = ({ aspect,equilizedValue }) => {
+  console.log("equilizedValue", equilizedValue);  
 
-  return (
+return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart
         width={500}
         height={300}
-        data={chartData}
+        data={equilizedValue}
         margin={{
           top: 5,
           right: 30,
           left: 20,
           bottom: 5,
         }}
-        barSize={5}
+        barSize={2}
       >
-        <XAxis dataKey="intensity" scale="point" padding={{ left: 10, right: 10 }} />
+        <XAxis dataKey="equiliziedHistogram" scale="point" padding={{ left: 10, right: 10 }} />
         <YAxis />
         <Tooltip />
         <Legend />
@@ -32,4 +32,4 @@ const Example = ({ aspect, chartData }) => {
   );
 }
 
-export default Example;
+export default Equilized;

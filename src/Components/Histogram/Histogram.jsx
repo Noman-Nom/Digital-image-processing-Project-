@@ -3,6 +3,7 @@ import './Histogram.scss';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Rectangle } from 'recharts';
 import Example from '../Example/Example';
+import Equilized from '../Equilized/Equilized';
 
 
 // const data = [
@@ -23,6 +24,8 @@ const Histogram = () => {
   const [size, setSize] = useState(0);
   const [chartData, setChartData] = useState([])
 
+ const [equilizedValue, setEquilizedValue] = useState([])
+
   const inputIntensity = [0,1,2,3,4,5,6,7]
 
   const handleSize = () => {
@@ -40,6 +43,10 @@ const Histogram = () => {
     // This effect will run whenever chartData is updated
     // console.log("chartData", chartData);
   }, [chartData]);
+
+  useEffect(() => {
+    
+  }, [equilizedValue]);
 
   const calculate = () => {
     // Step 1: Normalize the data
@@ -62,6 +69,17 @@ const Histogram = () => {
                   normalizeData:normalizeData[index]
                 }))
                 setChartData(data)
+    
+                const equilized = inputIntensity.map((intensity,index)=>({
+                  equiliziedHistogram: equiliziedHistogram[index],
+                    normalizeData: normalizeData[index]
+                }))
+            
+
+              //  console.log("transform=", equilized) 
+              setEquilizedValue(equilized)
+          
+  
 
     // console.log( "chartdata",chartData)
   
@@ -133,6 +151,7 @@ const Histogram = () => {
 
             <div className='chart'>
             <Example aspect={0.8/.5} chartData={chartData}/>
+            <Equilized  aspect={0.8/.5} equilizedValue={equilizedValue} />
             </div>
   
     </div>
