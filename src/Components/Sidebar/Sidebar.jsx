@@ -11,6 +11,8 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LockIcon from "@mui/icons-material/Lock";
 
 import { Link } from "react-router-dom";
+import { MdOutlineHideImage } from "react-icons/md";
+import { BsImageFill } from "react-icons/bs";
 
 
 const Sidebar = () => {
@@ -28,29 +30,52 @@ const Sidebar = () => {
       <hr />
       <div className="center">
         <ul>
-          <p className="title">Main</p>
+          <p className="title">Image Negative</p>
 
           <Link to="/" style={{ textDecoration: "none" }}>
             <li>
-              <SpaceDashboardIcon className="icon" />
-              <span>Dashboard</span>
+              <MdOutlineHideImage  className="icon" />
+              <span>Gray-Scale Image (-)</span>
+            </li>
+            <li>
+              <MdOutlineHideImage  className="icon" />
+              <span>Color Image (-)</span>
+            </li>
+            <li>
+              <MdOutlineHideImage  className="icon" />
+              <span>By Values (-)</span>
             </li>
           </Link>
 
-          <p className="title">Academic</p>
+          <p className="title">Intensity Transformation</p>
 
           <Link to="/user" style={{ textDecoration: "none" }}>
             <li>
-              <GroupOutlinedIcon className="icon" />
-              <span>Users</span>
+              <BsImageFill className="icon" />
+              <span>Thresholding</span>
             </li>
           </Link>
-          <Link to="/students" style={{ textDecoration: "none" }}>
+          <Link to="/user" style={{ textDecoration: "none" }}>
             <li>
-              <ManIcon className="icon" />
-              <span>Students</span>
+              <BsImageFill className="icon" />
+              <span>Thresholding (calc)</span>
             </li>
           </Link>
+          
+          <Link to="/user" style={{ textDecoration: "none" }}>
+            <li>
+              <BsImageFill className="icon" />
+              <span>PowerLaw Transformation</span>
+            </li>
+          </Link>
+          
+          <Link to="/user" style={{ textDecoration: "none" }}>
+            <li>
+              <BsImageFill className="icon" />
+              <span>PowerLaw Transformation (calc)</span>
+            </li>
+          </Link>
+          
           <p className="title">List</p>
           <Link to="/courses" style={{ textDecoration: "none" }}>
             <li>
