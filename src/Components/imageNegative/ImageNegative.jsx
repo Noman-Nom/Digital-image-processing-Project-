@@ -55,7 +55,7 @@ const ImageNegativeAlgorithm = () => {
                       value={value}
                       min="0"
                       max="15"
-                      type="number"
+                      type="text"
                       onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                     />
                   </td>
