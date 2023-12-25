@@ -2,6 +2,7 @@ import React from 'react'
 import Sidebar from '../../Components/Sidebar/Sidebar'
 import Navbar from '../../Components/Navbar/Navbar'
 import './ImageNegativePage.scss'
+import ImageNegativeAlgorithm from '../../Components/imageNegative/ImageNegative'
 
 const ImageNegativePage = () => {
   return (
@@ -9,7 +10,7 @@ const ImageNegativePage = () => {
       <Sidebar/>
       <div className="singleContainer">
         <Navbar/>
-     
+     <ImageNegativeAlgorithm/>
      
         
     
