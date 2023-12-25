@@ -1,0 +1,39 @@
+.home {
+    display: flex;
+
+    .homeContainer {
+        flex: 6;
+        // background-color: burlywood;
+
+        .widgets,
+        .charts {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .charts {
+            padding: 5px 20px;
+        }
+
+        .listContainer {
+            box-shadow: rgba(14 ,190, 233,0.8) 0px 3px 6px, rgb(93, 135, 255,0.8)  0px 3px 6px;
+            padding: 20px;
+            margin: 20px;
+
+            .listTitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: rgb(14 165 233);
+                margin-bottom: 15px;
+               
+                .icon{
+                    color:  rgb(14 165 233);
+                }
+            }
+        }
+    }
+
+}
