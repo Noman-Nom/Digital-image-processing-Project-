@@ -2,41 +2,29 @@ import React, { useState } from 'react';
 
 const ImageNegativeAlgorithm = () => {
   const [resultMatrix, setResultMatrix] = useState([]);
-  
-  const getMatrix = () => {
-    const table = document.getElementById("inputMatrix");
-    const values = [];
+  const [inputValues, setInputValues] = useState(Array(4).fill(Array(4).fill(0)));
 
-    for (let i = 0; i < table.rows.length; i++) {
-      values[i] = [];
+  const handleInputChange = (rowIndex, colIndex, event) => {
+    const { value } = event.target;
+    const newValue = isNaN(value) ? 0 : Math.max(0, Math.min(15, parseInt(value, 10)));
 
-      for (let j = 0; j < table.rows[i].cells.length; j++) {
-        const input = table.rows[i].cells[j].querySelector('input');
-        values[i][j] = parseInt(input.value, 10);
-      }
-    }
-
-    console.log("input matrix =", values);
-    return values;
+    setInputValues((prevInputValues) => {
+      const newInputValues = [...prevInputValues];
+      newInputValues[rowIndex] = [...newInputValues[rowIndex]]; // create a copy of the row
+      newInputValues[rowIndex][colIndex] = newValue;
+      return newInputValues;
+    });
   };
 
   const calculate = () => {
-    const inputMatrix = getMatrix();
-    const result = inputMatrix.map((row) =>
-      row.map((value) => {
-        console.log(`15 - ${value} = ${15 - value}`);
-        return 15 - value;
-      })
-    );
+    const result = inputValues.map((row) => row.map((value) => 15 - value));
 
-    console.log("Result Matrix", result);
     setResultMatrix(result);
     displayMatrix('resultMatrix', result);
   };
 
   const displayMatrix = (resultMatrix, result) => {
     const finalMatrix = document.getElementById(resultMatrix);
-    console.log(finalMatrix);
 
     while (finalMatrix.rows.length > 0) {
       finalMatrix.deleteRow(0);
@@ -47,7 +35,6 @@ const ImageNegativeAlgorithm = () => {
 
       for (let j = 0; j < result[i].length; j++) {
         const col = row.insertCell(j);
-
         col.appendChild(document.createTextNode(result[i][j]));
       }
     }
@@ -60,30 +47,21 @@ const ImageNegativeAlgorithm = () => {
         <h4>Enter Your Values between (0-15)</h4>
         <table id="inputMatrix">
           <tbody>
-            <tr>
-              <td><input value="0" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-            </tr>
-            <tr>
-              <td><input value="0" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-            </tr>
-            <tr>
-              <td><input value="0" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-            </tr>
-            <tr>
-              <td><input value="0" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-              <td><input value="0" min="0" max="15" type="text" /></td>
-            </tr>
+            {inputValues.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((value, colIndex) => (
+                  <td key={colIndex}>
+                    <input
+                      value={value}
+                      min="0"
+                      max="15"
+                      type="number"
+                      onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
+                    />
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
         <button onClick={calculate}>Calculate Negative</button>
