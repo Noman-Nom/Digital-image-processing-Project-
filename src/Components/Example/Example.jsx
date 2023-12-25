@@ -5,7 +5,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
 
 const Example = ({ aspect, chartData }) => {
-  console.log("chartData", chartData);  
+  // console.log("chartData", chartData);  
 
   return (
     <ResponsiveContainer width="100%" height="100%">

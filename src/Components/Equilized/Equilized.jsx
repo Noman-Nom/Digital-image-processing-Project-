@@ -5,7 +5,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 
 
 const Equilized = ({ aspect,equilizedValue }) => {
-  console.log("equilizedValue", equilizedValue);  
+  // console.log("equilizedValue", equilizedValue);  
 
 return (
     <ResponsiveContainer width="100%" height="100%">
