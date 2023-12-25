@@ -47,34 +47,42 @@ const ImageNegativeAlgorithm = () => {
             <h1><FaQuoteLeft />  Image Negative <span>Algorithim.. </span><FaQuoteRight /></h1>
             <div className='table__table'>
 
-                <table id="inputMatrix">
-                    <tbody>
-                        {inputValues.map((row, rowIndex) => (
-                            <tr key={rowIndex}>
-                                {row.map((value, colIndex) => (
-                                    <td key={colIndex}>
-                                        <input
-                                            value={value}
-                                            min="0"
-                                            max="15"
-                                            type="text"
-                                            onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
-                                        />
-                                    </td>
-                                ))}
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
+                <div className='single__table'>
+                    <table id="inputMatrix">
+                        <tbody>
+                            {inputValues.map((row, rowIndex) => (
+                                <tr key={rowIndex}>
+                                    {row.map((value, colIndex) => (
+                                        <td key={colIndex}>
+                                            <input
+                                                value={value}
+                                                min="0"
+                                                max="15"
+                                                type="text"
+                                                onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
+                                            />
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+
+                    <h1>Input Values </h1>
+                </div>
 
 
+                <div className='single__table'>
 
-                <table id="resultMatrix"></table>
+                    <table id="resultMatrix"></table>
+                    <h1>Output Values</h1>
+                </div>
+
 
 
 
             </div>
-            <div>
+            <div className='btn'>
 
                 <button onClick={calculate}>Calculate Negative</button>
             </div>

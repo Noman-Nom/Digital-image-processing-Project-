@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    justify-content: center;
+    align-items: center;
            
             gap: 20px;
 
@@ -16,7 +18,7 @@
                 letter-spacing: 0.1px;
                 font-family: var(--font-base);
                 font-family: 'Nunito', sans-serif;
-                color: #0F172A;
+              color: white;
 
                 span{
                     color: #EC4899;
@@ -35,6 +37,66 @@
                 justify-content: center;
                 // align-items: center;
                 gap: 42px;
+                flex: 1;
+                position: relative;
+                padding: 20px;
+                
+
+                .single__table{
+                    padding: 20px;
+                    width: 450px;
+                    height: 320px;
+
+                    box-shadow: rgba(14 ,190, 233,0.8) 0px 3px 6px, rgb(93, 135, 255,0.8)  0px 3px 6px;
+
+             
+                    h1{
+                        margin-top: 20px;
+                         margin-bottom: 10px;
+                                color: #111111;
+                                font-size: 20px;
+                                font-weight: 600;
+                                font-weight: 700;
+                                word-spacing: 15px;
+                                letter-spacing: 0.1px;
+                                font-family: var(--font-base);
+                                font-family: 'Nunito', sans-serif;
+                              color: white;
+                               
+                    }
+                  
+                    table{
+                        width: 100%;
+                        height: 100%;
+                        padding: 20px;
+                        background-color: #0F172A;
+                        
+                        color: white;
+                        border: 1px solid white;
+                        td{
+                            border: 1px solid white;
+                        }
+
+
+                        input{
+                           
+                            color: white;
+                            
+                            width: 100%;
+                            padding: 9px;
+                            outline: none;
+                            border: none;
+                            font-size: 15px;
+                            background-color: #0F172A;
+                           
+                        }
+                    }
+                }
+                
+
+               
+
+
 
                 h4{
 
@@ -49,4 +111,26 @@
 
                 }
             }
+}
+
+.btn{
+    width: 160px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(73, 190, 255);
+    background-color: rgba(35, 165, 245, 0.158);
+    border-radius: 3px;
+    button{
+        padding: 3px 7px; 
+        font-weight: 500;
+        font-size: 16px;
+        // border: 0;
+        // border-radius: 3px;
+        cursor: pointer;
+        color: rgb(73, 190, 255);
+    background-color: rgba(35, 165, 245, 0.158);
+       }
 }
