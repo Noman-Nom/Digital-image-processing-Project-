@@ -13,6 +13,12 @@ import LockIcon from "@mui/icons-material/Lock";
 import { Link } from "react-router-dom";
 import { MdOutlineHideImage } from "react-icons/md";
 import { BsImageFill } from "react-icons/bs";
+import { PiImagesSquare } from "react-icons/pi";
+
+import { FaFaceGrinStars } from "react-icons/fa6";
+import { CiText } from "react-icons/ci";
+import { IoLogoEdge } from "react-icons/io5";
+
 
 
 const Sidebar = () => {
@@ -75,44 +81,44 @@ const Sidebar = () => {
               <span>PowerLaw Transformation (calc)</span>
             </li>
           </Link>
-          
-          <p className="title">List</p>
-          <Link to="/courses" style={{ textDecoration: "none" }}>
+          <Link to="/user" style={{ textDecoration: "none" }}>
             <li>
-              <ImportContactsIcon className="icon" />
-              <span>Courses</span>
+              <BsImageFill className="icon" />
+              <span>Color To GrayScale</span>
             </li>
           </Link>
+          
+          <p className="title">Image Enhancement</p>
+          <Link to="/courses" style={{ textDecoration: "none" }}>
+            <li>
+              < PiImagesSquare className="icon" />
+              <span>Histogram Equilization</span>
+            </li>
+          </Link>
+         
+       
+          <p className="title">OpenSource Libraries</p>
           <li>
-            <ClassIcon className="icon" />
-            <span>Sumesters</span>
-          </li>
-          <li>
-            <AutoStoriesIcon className="icon" />
-            <span>Sessions</span>
-          </li>
-          <li>
-            <TextFieldsIcon className="icon" />
-            <span>Fields</span>
-          </li>
-          <p className="title">Users</p>
-          <li>
-            <AccountCircleIcon className="icon" />
+            < FaFaceGrinStars  className="icon" />
 
-            <span>Profile</span>
+            <span>Face Detector</span>
           </li>
-          <li>
-            <LockIcon className="icon" />
-            <span>Logout</span>
-          </li>
+          <Link to="/courses" style={{ textDecoration: "none" }}>
+            <li>
+              < CiText className="icon" />
+              <span>Image To Text</span>
+            </li>
+          </Link>
+          <Link to="/courses" style={{ textDecoration: "none" }}>
+            <li>
+              <  IoLogoEdge className="icon" />
+              <span>Edge Detector</span>
+            </li>
+          </Link>
+          
         </ul>
       </div>
-      <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"
-        ></div>
-        
-      </div>
+      
     </div>
   );
 };
