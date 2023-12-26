@@ -5,18 +5,15 @@ import './ColorToGrayPage.scss'
 import ColorToGray from '../../Components/ColorToGray/ColorToGray'
 
 const ColorToGrayPage = () => {
-    return (
-        <div className='Single'>
-        <Sidebar/>
-        <div className="singleContainer">
-          <Navbar/>
-       <ColorToGray/>
-       
-          
-      
+  return (
+    <div className='Single'>
+      <Sidebar />
+      <div className="singleContainer">
+        <Navbar />
+        <ColorToGray />
       </div>
-      </div>
-      )
+    </div>
+  )
 }
 
 export default ColorToGrayPage

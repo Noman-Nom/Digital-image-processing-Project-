@@ -9,6 +9,7 @@ import ThresholdPage from './Pages/ThresholdPage/ThresholdPage'
 import GscaleNegativePage from './Pages/GscaleNegativePage/GscaleNegativePage'
 import ThresholdAlgPage from './Pages/ThresholdAlgPage/ThresholdAlgPage'
 import ColorToGrayPage from './Pages/ColorToGrayPage/ColorToGrayPage'
+import EdgeDetectorPage from './Pages/EdgeDetectorPage/EdgeDetectorPage'
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       <Route  path='/gscalenegative' element={<GscaleNegativePage/>} />
       <Route  path='/thresholdAlg' element={<ThresholdAlgPage/>} />
       <Route  path='/colortogray' element={<ColorToGrayPage/>} />
+      <Route  path='/edge' element={<EdgeDetectorPage/>} />
 
     
 
