@@ -1,57 +1,185 @@
-    
-    h1{
-        text-align: center;
-        margin-top: 20px;
-    
+.histogram {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 30px;
+
+    h1 {
+
+        font-size: 28px;
+        line-height: 30px;
+        font-weight: 700;
+        word-spacing: 15px;
+        letter-spacing: 0.1px;
+        font-family: var(--font-base);
+        font-family: 'Nunito', sans-serif;
+        color: white;
+
+        span {
+            color: #EC4899;
+        }
+
+        svg {
+            color: #0091CF;
+
+            font-size: 25px;
+        }
+
     }
-    .container{
+
+    .histogram__size {
+        width: 600px;
+        height: 60px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
+        color: white;
+        padding: 20px;
+
+        .histogram__inputs {
+            width: 400px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px;
+
+            input {
+                border: 0;
+                outline: 0;
+                padding: 12px 6px;
+                width: 100%;
+                background-color: #0F172A;
+                color: white;
+                border-radius: 13px;
+                font-size: 18px;
+                border: 1px solid white;
+            }
+        }
+
+        .btn__size {
+           
+                border: #0F172A solid;
+            button {
+                padding: 6px 7px;
+                font-weight: 500;
+                font-size: 16px;
+                width: 130px;
+                margin-right: 10px;
+              border-radius:15px ;
+
+                cursor: pointer;
+                color: rgb(73, 190, 255);
+                background-color: rgba(35, 165, 245, 0.158);
+
+            }
+        }
+
+    }
+
+    .histogram__tables{
+        margin-top: 10px;
+        // border: 1px solid yellow;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        border: 1px solid green;
-    }
-    table {
-        border-collapse: collapse;
-        margin-top: 10px;
-        align-items: center;
-        background-color: rgb(183, 205, 210);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        width: 300px;
-        
-    }
-    
-    button{
-        padding: 10px 11px;
-        font-size: 14px;
-        font-weight: 500;
-        border-radius: 10px;
-        border: 0;
-        outline: 0;
-        cursor: pointer;
-        background-color: rgb(183, 205, 210);
-        width: 150px;
-    }
-    
-    table, th, td {
-        border: 1px solid black;
-        padding: 5px;
-        text-align: center;
-        
-    }
-    table input{
-        outline: none;
-        border: 0;
-        padding: 10px;
-        background-color: rgb(183, 205, 210);
-        width: 50px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin: 0px;
-    }
+        gap: 60px;
+        width: 90%;
+        height: 470px;
 
-    .chart{
-        border: 1px solid white;
-        width: 500px;
-        height: 280px;
+
+        box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
+        color: white;
+
+        .tables__box{
+            display: flex;
+            width: 450px;
+            height: 400px;
+            box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
+            color: white;
+            justify-content: space-between;
+
+            table{
+                padding: 23px;
+                width: 100%;
+                height: 100%;
+                border-collapse: collapse;
+               td{
+                border: 1px solid white;
+                text-align: center;
+                // padding: 10px;
+                input{
+                    background: transparent;
+                    color: white;
+                    border: 0;
+                    outline: 0;
+                    text-align: center;
+                    color: white;
+                    font-size: 16px;
+                    
+                }
+
+               }
+               th{
+                border: 1px solid white;
+               }
+            }
+           
+        }
+
+
     }
+    .histogram__calc{
+        width: 190px;
+        height: 40px;
+        border: 1px solid gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(73, 190, 255);
+        background-color: rgba(35, 165, 245, 0.158);
+        cursor: pointer;
+        
+        box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
+        
+        button{
+            background: transparent;
+            border: none;
+            padding: 5px 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+
+        }
+        
+    }
+    
+}
+.chart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid green;
+    width: 90%;
+    height: 400px;
+    box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
+    .ex{
+       width: 100%;
+       height: 100%;
+       color: white;
+
+
+    }
+}

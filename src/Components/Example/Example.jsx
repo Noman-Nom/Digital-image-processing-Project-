@@ -1,14 +1,34 @@
-import React from 'react'
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import React from 'react';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  ResponsiveContainer,
+} from 'recharts';
 
-// import './Chart.scss'
-
+const CustomAxisTick = ({ x, y, payload }) => (
+  <g transform={`translate(${x},${y})`}>
+    <text
+      x={0}
+      y={0}
+      dy={16}
+      fontSize={18}
+      fill="#fff" // Set the text color to white
+      textAnchor="end"
+      transform="rotate(-45)"
+    >
+      {payload.value}
+    </text>
+  </g>
+);
 
 const Example = ({ aspect, chartData }) => {
-  // console.log("chartData", chartData);  
-
   return (
-    <ResponsiveContainer width="100%" height="100%">
+    <ResponsiveContainer width="100%" aspect={aspect} height="100%">
       <BarChart
         width={500}
         height={300}
@@ -19,17 +39,25 @@ const Example = ({ aspect, chartData }) => {
           left: 20,
           bottom: 5,
         }}
-        barSize={5}
+        barSize={10}
       >
-        <XAxis dataKey="intensity" scale="point" padding={{ left: 10, right: 10 }} />
-        <YAxis />
+        <XAxis
+          stroke="gray"
+          dataKey="intensity"
+          scale="point"
+          padding={{ left: 10, right: 10 }}
+          tick={<CustomAxisTick />}
+        />
+        <YAxis
+          tick={{ fill: '#fff' }} // Set the tick color to white
+        />
         <Tooltip />
         <Legend />
-        <CartesianGrid strokeDasharray="3 3" />
-        <Bar dataKey="normalizeData" fill="#8884d8" background={{ fill: '#eee' }} />
+        <CartesianGrid strokeDasharray=".1 .5" />
+        <Bar dataKey="normalizeData" fill="#0091CF" background={{ fill: '#0F172A' }} />
       </BarChart>
     </ResponsiveContainer>
   );
-}
+};
 
 export default Example;
