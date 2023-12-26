@@ -100,6 +100,8 @@
                                 font-family: var(--font-base);
                                 font-family: 'Nunito', sans-serif;
                               color: white;
+                              text-align: center;
+                              margin-top: 20px;
                                
                     }
                   
@@ -111,8 +113,10 @@
                         
                         color: white;
                         border: 1px solid white;
+                        border-collapse: collapse;
                         td{
-                            border: 1px solid white;
+                            // border: 1px solid white;
+                            text-align: center;
                         }
 
 
