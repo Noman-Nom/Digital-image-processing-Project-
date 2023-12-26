@@ -72,18 +72,24 @@ const ThresholdAlg = () => {
     }, []);
 
     return (
-        <div className='gscale'>
+        <div className='ctog'>
 
-<h1><FaQuoteLeft /> Thresholding <span>Algorithim.. </span><FaQuoteRight /></h1>
+            <h1><FaQuoteLeft /> Thresholding <span>Algorithim.. </span><FaQuoteRight /></h1>
 
-                    <div className='gscale__input'>
-            <input type="file" id="imageInput" accept="image/*" ref={imageInputRef} onChange={handleImage} />
-            <label htmlFor="thresholdValue">Threshold Value:</label>
-            <input type="range" id="thresholdValue" min="0" max="255" defaultValue="128" onChange={updateThreshold} />
-            <span id="thresholdDisplay">128</span>
-                    </div>
+            <div className='ctog__input'>
+                <div className="ctog__input-item">
 
-            <div className='canvas-container'>
+              
+                    <input type="file" id="imageInput" accept="image/*" ref={imageInputRef} onChange={handleImage} />
+                </div>
+                <div className='ctog__input-item'>
+                <label htmlFor="thresholdValue">Threshold Value:</label>
+                    <input type="range" id="thresholdValue" min="0" max="255" defaultValue="128" onChange={updateThreshold} />
+                    <span id="thresholdDisplay">128</span>
+                </div>
+            </div>
+
+            <div className='ctog__img'>
 
                 <canvas id="inputCanvas" width="500" height="500"></canvas>
                 <canvas id="outputCanvas" width="500" height="500"></canvas>
