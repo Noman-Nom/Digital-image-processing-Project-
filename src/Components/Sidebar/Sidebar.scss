@@ -35,7 +35,7 @@
             .title{
                 font-size: 15px;
                 font-weight: bold;
-                color: #999;
+                color: #ffffff;
                 margin-top: 15px;
                 margin-bottom: 5px;
             }
@@ -44,6 +44,7 @@
                 padding: 5px;
                 align-items: center;
                 cursor: pointer;
+                color: white;
 
                 &:hover{
                     background-color: rgb(247, 217, 217);
@@ -55,8 +56,8 @@
                 }
                 span{
                     font-size:13px ;
-                    color:#999;
-                    font-weight: 600;
+                    color:#ffffff;
+                    font-weight: 400;
                     margin-left: 10px;
                 }
             }
