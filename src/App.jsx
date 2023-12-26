@@ -5,6 +5,7 @@ import './App.css'
 import Home from './Pages/Home/Home'
 import ImageNegativePage from './Pages/ImageNegativePage/ImageNegativePage'
 import PowerLawTransformationPage from './Pages/PowerLawTransformationPage/PowerLawTransformationPage'
+import ThresholdPage from './Pages/ThresholdPage/ThresholdPage'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route  path='/histogram' element={<Histogram/>} />
       <Route  path='/negetive' element={<ImageNegativePage/>} />
       <Route  path='/powerlaw' element={<PowerLawTransformationPage/>} />
+      <Route  path='/threshold' element={<ThresholdPage/>} />
 
     
 
