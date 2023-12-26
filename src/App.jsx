@@ -11,6 +11,7 @@ import ThresholdAlgPage from './Pages/ThresholdAlgPage/ThresholdAlgPage'
 import ColorToGrayPage from './Pages/ColorToGrayPage/ColorToGrayPage'
 import EdgeDetectorPage from './Pages/EdgeDetectorPage/EdgeDetectorPage'
 import ImageToTextPage from './Pages/ImageToTextPage/ImageToTextPage'
+import FaceDetector from './Components/FaceDetector/FaceDetector'
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
       <Route  path='/colortogray' element={<ColorToGrayPage/>} />
       <Route  path='/edge' element={<EdgeDetectorPage/>} />
       <Route  path='/imtt' element={<ImageToTextPage/>} />
+      <Route  path='/facedetector' element={<FaceDetector/>} />
 
     
 
