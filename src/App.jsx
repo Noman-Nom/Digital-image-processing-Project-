@@ -7,6 +7,7 @@ import ImageNegativePage from './Pages/ImageNegativePage/ImageNegativePage'
 import PowerLawTransformationPage from './Pages/PowerLawTransformationPage/PowerLawTransformationPage'
 import ThresholdPage from './Pages/ThresholdPage/ThresholdPage'
 import GscaleNegativePage from './Pages/GscaleNegativePage/GscaleNegativePage'
+import ThresholdAlgPage from './Pages/ThresholdAlgPage/ThresholdAlgPage'
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <Route  path='/powerlaw' element={<PowerLawTransformationPage/>} />
       <Route  path='/threshold' element={<ThresholdPage/>} />
       <Route  path='/gscalenegative' element={<GscaleNegativePage/>} />
+      <Route  path='/thresholdAlg' element={<ThresholdAlgPage/>} />
 
     
 
