@@ -67,7 +67,7 @@ const PowerLawTransformation = () => {
             <h1><FaQuoteLeft /> Power Law Transformation <span>Algorithim.. </span><FaQuoteRight /></h1>
                     <div className='bitdepth'><input  onChange={(e)=>setGamma(e.target.value)} type="text"  placeholder='Enter Gamma value ' />
                   <div className='calculate-btn'>
-                    <button onClick={handleBd}>Calculate BD</button>
+                    <button onClick={handleBd}>Calculate γ </button>
 
                   </div>
                    
