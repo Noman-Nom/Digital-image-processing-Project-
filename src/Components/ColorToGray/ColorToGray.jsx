@@ -18,7 +18,7 @@ const ColorToGray = () => {
 
   return (
     <div className='gscale'>
-         <h1><FaQuoteLeft /> Image Negative <span>Algorithim.. </span><FaQuoteRight /></h1>
+         <h1><FaQuoteLeft /> Color Image To Gray Scale <span>Algorithim.. </span><FaQuoteRight /></h1>
          <div className='gscale__input'>
 
       <input type="file" id="imageInput" accept="image/*" onChange={handleImage} />

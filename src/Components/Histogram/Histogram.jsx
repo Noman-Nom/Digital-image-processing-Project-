@@ -4,17 +4,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { Rectangle } from 'recharts';
 import Example from '../Example/Example';
 import Equilized from '../Equilized/Equilized';
-
-
-// const data = [
-//   // i want x -axis input intensities and in y -axis normalized valuees
-
-// ];
-
-
-
-
-
+import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 
 const Histogram = () => {
@@ -111,11 +101,23 @@ const Histogram = () => {
   };
   
   return (
-    <div className='container'>
-      <input type="text" value={width} onChange={(e) => setWidth(e.target.value)} />
-      <input type="text" value={height} onChange={(e) => setHeight(e.target.value)} />
+    <div className='tableContainer'>
+      <h1><FaQuoteLeft /> Histogram Equilization <span>Algorithim.. </span><FaQuoteRight /></h1>
+      <div className='bitdepthh'>
+
+        <div className='input'>
+
+      <input type="text" value={width} placeholder='Enter Width' onChange={(e) => setWidth(e.target.value)} />
+      <span>X</span>
+      <input type="text" value={height} placeholder='Enter Height' onChange={(e) => setHeight(e.target.value)} />
+        </div>
+      <div className='calculate-btn'>
 
       <button onClick={handleSize}>Calculate Image Size</button>
+      </div>
+      </div>
+
+<div className='single__table'>
 
       <table id='inputData'>
 
@@ -136,6 +138,7 @@ const Histogram = () => {
           </tr>
         ))}
       </table>
+</div>
 
       <button onClick={calculate}>Calculate Histogram</button>
 
