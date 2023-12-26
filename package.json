@@ -21,7 +21,8 @@
     "rechart": "^0.0.1",
     "recharts": "^2.10.3",
     "sass": "^1.69.5",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "tesseract.js": "^5.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
