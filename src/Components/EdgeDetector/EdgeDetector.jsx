@@ -78,7 +78,7 @@ const EdgeDetector = () => {
   return (
   
   <div className='edge'>
-      <h1><FaQuoteLeft /> Grayscale To Color Scale <span>Algorithim.. </span><FaQuoteRight /></h1>
+      <h1><FaQuoteLeft /> Edge Detector (Sobel Operator) <span>Algorithim.. </span><FaQuoteRight /></h1>
       <div className='edge__input'>
 
         <input type="file" id="imageInput" accept="image/*" onChange={handleImage} />
