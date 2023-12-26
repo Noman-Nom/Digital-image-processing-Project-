@@ -91,7 +91,7 @@ const ThresholdAlg = () => {
 
             <div className='ctog__img'>
 
-                <canvas id="inputCanvas" width="500" height="500"></canvas>
+                <canvas id="inputCanvas" width="500" height="350"></canvas>
                 <canvas id="outputCanvas" width="500" height="500"></canvas>
             </div>
         </div>
