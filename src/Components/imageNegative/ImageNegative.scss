@@ -1,5 +1,5 @@
 .tableContainer{
-    border: 1px solid green;
+    // border: 1px solid green;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -29,6 +29,44 @@
                     font-size: 25px;
                 }
                 
+            }
+
+            .bitdepth{
+                width: 300px;
+                height: 50px;
+              
+                border-radius: 3px;
+               
+                border: 1px solid white;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                input{
+                    border: 0;
+                    outline: 0;
+                    padding: 12px 6px;
+                   width: 100%;
+                   background-color: #0F172A;
+                   color: white;
+                   font-size: 18px;
+
+
+
+                }
+               
+                button{
+                    padding: 6px 7px; 
+                    font-weight: 500;
+                    font-size: 16px;
+                    width: 130px;
+                    margin-right: 10px;
+                 
+                    cursor: pointer;
+                    color: rgb(73, 190, 255);
+                background-color: rgba(35, 165, 245, 0.158);
+
+                }
             }
 
             .table__table{
@@ -113,24 +151,21 @@
             }
 }
 
-.btn{
-    width: 160px;
-    height: 40px;
+.calculate-btnn{
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(73, 190, 255);
-    background-color: rgba(35, 165, 245, 0.158);
-    border-radius: 3px;
-    button{
-        padding: 3px 7px; 
+    width: 150px;
+    height: 40px;
+    
+    .calc{
+        padding: 6px 7px; 
         font-weight: 500;
         font-size: 16px;
-        // border: 0;
-        // border-radius: 3px;
+     
+        margin-right: 10px;
+     
         cursor: pointer;
         color: rgb(73, 190, 255);
     background-color: rgba(35, 165, 245, 0.158);
-       }
+
+    }
 }

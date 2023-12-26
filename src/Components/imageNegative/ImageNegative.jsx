@@ -5,6 +5,10 @@ import './ImageNegative.scss'
 const ImageNegativeAlgorithm = () => {
     const [resultMatrix, setResultMatrix] = useState([]);
     const [inputValues, setInputValues] = useState(Array(4).fill(Array(4).fill(0)));
+    const [bitdepth, setBitdepth] = useState(4)
+
+    console.log("bitdepth = ",  bitdepth)
+
 
     const handleInputChange = (rowIndex, colIndex, event) => {
         const { value } = event.target;
@@ -45,6 +49,13 @@ const ImageNegativeAlgorithm = () => {
     return (
         <div className='tableContainer'>
             <h1><FaQuoteLeft />  Image Negative <span>Algorithim.. </span><FaQuoteRight /></h1>
+                    <div className='bitdepth'><input  onChange={(e)=>setBitdepth(e.target.value)} type="text"  placeholder='Enter Bitdepth' />
+                  <div className='calculate-btn'>
+                    <button>Calculate BD</button>
+
+                  </div>
+                   
+                    </div>
             <div className='table__table'>
 
                 <div className='single__table'>
@@ -57,7 +68,7 @@ const ImageNegativeAlgorithm = () => {
                                             <input
                                                 value={value}
                                                 min="0"
-                                                max="15"
+                                                
                                                 type="text"
                                                 onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                             />
@@ -82,9 +93,9 @@ const ImageNegativeAlgorithm = () => {
 
 
             </div>
-            <div className='btn'>
+            <div className='calculate-btnn'>
 
-                <button onClick={calculate}>Calculate Negative</button>
+                <button className='calc' onClick={calculate}>Calculate Negative</button>
             </div>
 
         </div>
