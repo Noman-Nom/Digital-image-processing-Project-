@@ -24,7 +24,7 @@ const ImageToText = () => {
   return (
     <div className='imgToTxt'>
 
-      <h1><FaQuoteLeft /> Image To Text Convertor<span>Algorithim.. </span><FaQuoteRight /></h1>
+      <h1><FaQuoteLeft /> Image To Text Convertor<span> Algorithim.. </span><FaQuoteRight /></h1>
       <div className='imt__inp'>
 
         <input type="file" id="imageInput" accept="image/*" onChange={recognizeText} />
