@@ -76,14 +76,11 @@ const ThresholdAlg = () => {
 
 <h1><FaQuoteLeft /> Thresholding <span>Algorithim.. </span><FaQuoteRight /></h1>
 
-                    <div>
-
+                    <div className='gscale__input'>
             <input type="file" id="imageInput" accept="image/*" ref={imageInputRef} onChange={handleImage} />
-            <br />
             <label htmlFor="thresholdValue">Threshold Value:</label>
             <input type="range" id="thresholdValue" min="0" max="255" defaultValue="128" onChange={updateThreshold} />
             <span id="thresholdDisplay">128</span>
-            <br />
                     </div>
 
             <div className='canvas-container'>
