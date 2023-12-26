@@ -118,7 +118,7 @@ const Threshold = () => {
     </div>
     <div className='calculate-btnn'>
 
-        <button className='calc' onClick={calculate}>Calculate PLT</button>
+        <button className='calc' onClick={calculate}>Calculate Threshold</button>
     </div>
 
 </div>
