@@ -13,7 +13,7 @@ export const TeamSource = [
         id:3,
         name:"Sheraz Ahmed",
         email:"sherazahmed520@gmail.com",
-        img:"/sample.png",
+        img:"/sheraz.jpg",
         desig:"Computer Systems Engineer"
 
     },
@@ -21,7 +21,7 @@ export const TeamSource = [
         id:4,
         name:"Syed Moiz Ali Shah",
         email:"syedmoizalishah@gmail.com",
-        img:"/sample.png",
+        img:"/moiz.jpg",
         desig:"Computer Systems Engineer"
 
     },
