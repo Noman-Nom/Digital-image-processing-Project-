@@ -20,7 +20,7 @@ const Sidebar = () => {
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
           <div className="logo">
-            <img src="/nomLogo2.png" alt="" />
+            <img src="/logo.png" alt="Not found" />
           </div>
         </Link>
       </div>
