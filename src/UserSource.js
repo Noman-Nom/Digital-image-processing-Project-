@@ -21,7 +21,7 @@ export const TeamSource = [
         id:4,
         name:"Syed Moiz Ali Shah",
         email:"syedmoizalishah@gmail.com",
-        img:"/moiz.jpg",
+        img:"/moizprof.jpg",
         desig:"Computer Systems Engineer"
 
     },
