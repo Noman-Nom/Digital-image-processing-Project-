@@ -44,10 +44,14 @@
     .ctog__input-item {
       display: flex;
       justify-content: center;
+      align-items: center;
       flex-direction: row;
       color: rgb(255, 255, 255);
+   
       gap: 10px;
 
+
+   
 
     }
   }
@@ -70,4 +74,26 @@
       box-shadow: rgba(14, 190, 233, 0.8) 0px 3px 6px, rgb(93, 135, 255, 0.8) 0px 3px 6px;
     }
   }
+}
+
+#cont{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+
+  gap: 10px;
+  margin-right: 40px;
+
+
+  
+
+  svg{
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+  }
+
 }

@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
+import { CiImageOn } from "react-icons/ci";
 import './ThresholdAlg.scss'
 
 const ThresholdAlg = () => {
@@ -77,10 +78,10 @@ const ThresholdAlg = () => {
             <h1><FaQuoteLeft /> Thresholding <span>Algorithim.. </span><FaQuoteRight /></h1>
 
             <div className='ctog__input'>
-                <div className="ctog__input-item">
+                <div id='cont' className="ctog__input-item">
 
-              
-                    <input type="file" id="imageInput" accept="image/*" ref={imageInputRef} onChange={handleImage} />
+                    <label htmlFor="imageInput"><CiImageOn/></label>
+                    <input type="file" id="imageInput" accept="image/*" ref={imageInputRef} onChange={handleImage} style={{display:"none"}} />
                 </div>
                 <div className='ctog__input-item'>
                 <label htmlFor="thresholdValue">Threshold Value:</label>
