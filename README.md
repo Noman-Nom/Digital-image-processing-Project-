@@ -1,13 +1,41 @@
-# React + Vite
+# Pixel MERN Project Documentation
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a full-stack web application developed with the MERN stack (MongoDB, Express.js, React.js, Node.js). The frontend is built using React.js with Vite for package management. The primary focus of this project is the implementation of Dependency Inversion Principle (DIP) algorithms for automation tasks using core JavaScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Pixel MERN Project Team
 
-# This is Sheraz Ahmed team member of Pixel Mern Project.
-# This is MOIZ ALI of Pixel Mern Project.
-# This is Muhammad Noman of Pixel Mern Project.
+## Muhammad Noman
+## Sheraz Ahmed
+## Muhammad Anwar Badat
+## Moiz Ali Shah
 
+
+## Project Structure
+
+```plaintext
+pixel-mern-project/
+|-- backend/                  # Node.js server using Express
+|   |-- controllers/         # Backend controllers
+|   |-- models/              # MongoDB data models
+|   |-- routes/              # Express routes
+|   |-- config/              # Configuration files
+|   |-- server.js            # Entry point for the backend server
+|
+|-- frontend/                 # React.js frontend using Vite
+|   |-- src/
+|   |   |-- components/      # Reusable React components
+|   |   |-- pages/           # React pages
+|   |   |-- App.js           # Main React component
+|   |   |-- index.js         # Entry point for the React application
+|
+|-- dip-algorithms/          # Core JavaScript implementation of DIP algorithms
+|   |-- algorithm1.js
+|   |-- algorithm2.js
+|   |-- ...
+|
+|-- .gitignore               # Git ignore file
+|-- package.json             # Node.js package file for backend
+|-- frontend/package.json    # Package file for the React.js frontend
+|-- README.md                # Project documentation
