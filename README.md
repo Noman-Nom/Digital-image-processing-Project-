@@ -8,3 +8,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 # This is Sheraz Ahmed team member of Pixel Mern Project.
+# This is MOIZ ALI of Pixel Mern Project.
+# This is Muhammad Noman of Pixel Mern Project.
+
