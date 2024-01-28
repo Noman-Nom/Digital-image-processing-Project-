@@ -9,4 +9,5 @@ Currently, two official plugins are available:
 
 # This is Sheraz Ahmed team member of Pixel Mern Project.
 # This is MOIZ ALI of Pixel Mern Project.
+# This is Muhammad Noman of Pixel Mern Project.
 
