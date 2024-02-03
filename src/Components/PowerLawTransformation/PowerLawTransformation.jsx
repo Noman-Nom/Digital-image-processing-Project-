@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-
+import './PowerLawTransformation.scss'
 const PowerLawTransformation = () => {
     const [resultMatrix, setResultMatrix] = useState([]);
     const [inputValues, setInputValues] = useState(Array(4).fill(Array(4).fill(0)));
