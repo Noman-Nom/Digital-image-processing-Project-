@@ -59,7 +59,7 @@ We welcome contributions from the community. If you have a new algorithm to add 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Contact
-For any inquiries or support, please contact the team lead Muhammad Noman at [noman@example.com](mailto:noman5456318@gmail.com).
+For any inquiries or support, please contact the team lead Muhammad Noman at [noman@5456318@gmail.com](mailto:noman5456318@gmail.com).
 
 Feel free to explore and contribute to PIXELMERN!
 
