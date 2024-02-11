@@ -28,6 +28,7 @@ PIXELMERN is a full-stack web application developed using React.js, Node.js, SCS
 8. Image to Text Converter
 9. Edge Detector
 10. Face Detector
+11. image classification
 
 *Note: Additional algorithms will be added in future updates.*
 
